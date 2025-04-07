@@ -1,0 +1,50 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "paths": {
+      "@actor": ["src/module/actor/index.ts"],
+      "@actor/*": ["src/module/actor/*"],
+      "@item": ["src/module/item/index.ts"],
+      "@item/*": ["src/module/item/*"],
+      "@scene": ["src/module/scene/index.ts"],
+      "@scene/*": ["src/module/scene/*"],
+      "@system/*": ["src/module/system/*"],
+      "@module/*": ["src/module/*"],
+      "@scripts/*": ["src/scripts/*"],
+      "@util": ["src/util/index.ts"],
+      "@util/*": ["src/util/*"],
+      "@/*": ["./*"]
+    },
+    "types": ["jest", "jquery", "node", "tooltipster"],
+    "typeRoots": ["node_modules/@types", "types/foundry"],
+    "lib": ["ESNext", "DOM"],
+  },
+  "watchOptions": {
+    "fallbackPolling": "dynamicpriority",
+    "excludeDirectories": ["dist", "packs", "static"]
+  }
+}

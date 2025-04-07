@@ -1,0 +1,22 @@
+{
+    "id": "animabfv2",
+    "title":"Anima Beyond Foundry Dev",
+    "description":"Desarrollo en solitario del sistema de AnimaBeyondFantasy basado en pf2e",
+    "version":"1.0.0",
+    "compatibility": {
+        "minimum": "12.328",
+        "verified": "12.331",
+        "maximum": "13"
+    },
+    "esmodules": [
+        "bundle.js"
+    ],
+    "grid": {
+        "distance": 5,
+        "units": "ft",
+        "diagonals": 4
+    },
+    "socket": true,
+    "initiative": "1d100",
+    "primaryTokenAttribute": "attributes.hp"
+}

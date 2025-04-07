@@ -1,0 +1,190 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "common": {
+        "attributes": {
+          "hp": {
+            "value": 0,
+            "temp": 0
+          },
+          "speed": {
+            "value": 25,
+            "otherSpeeds": []
+          }
+        },
+        "details": {
+          "languages": {
+            "value": [],
+            "details": ""
+          },
+          "level": {
+            "value": 1
+          }
+        },
+        "resources": {}
+      }
+    },
+    "htmlFields": [
+      "details.biography.appearance",
+      "details.biography.backstory",
+      "details.biography.campaignNotes",
+      "details.biography.allies",
+      "details.biography.enemies",
+      "details.biography.organizations",
+      "details.description",
+      "details.privateNotes",
+      "details.publicNotes"
+    ],
+    "character": {
+      "templates": ["common"],
+      "abilities": null,
+      "details": {
+        "biography": {
+          "appearance": "",
+          "backstory": "",
+          "birthPlace": "",
+          "attitude": "",
+          "beliefs": "",
+          "anathema": [],
+          "edicts": [],
+          "likes": "",
+          "dislikes": "",
+          "catchphrases": "",
+          "campaignNotes": "",
+          "allies": "",
+          "enemies": "",
+          "organizations": "",
+          "visibility": {
+            "appearance": true,
+            "backstory": false,
+            "personality": false,
+            "campaign": false
+          }
+        },
+        "age": {
+          "value": ""
+        },
+        "height": {
+          "value": ""
+        },
+        "weight": {
+          "value": ""
+        },
+        "gender": {
+          "value": ""
+        },
+        "ethnicity": {
+          "value": ""
+        },
+        "nationality": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "armor",
+      "equipment",
+      "treasure",
+      "weapon"
+    ],
+    "htmlFields": [
+      "description.gm",
+      "description.value",
+      "identification.data.description.value"
+    ],
+    "templates": {
+      "common": {
+        "description": {
+          "gm": "",
+          "value": ""
+        },
+        "traits": {
+          "otherTags": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        }
+      }
+    },
+    "treasure": {
+      "templates": ["common", "physical"],
+      "stackGroup": null
+    },
+    "weapon": {
+      "templates": ["common", "physical", "investable"],
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "category": "simple",
+      "group": null,
+      "bonus": {
+        "value": 0
+      },
+      "damage": {
+        "dice": 1,
+        "die": "d6",
+        "damageType": "slashing",
+        "persistent": null
+      },
+      "equipped": {
+        "handsHeld": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "splashDamage": {
+        "value": 0
+      },
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "runes": {
+        "potency": 0,
+        "striking": 0,
+        "property": []
+      },
+      "specific": null,
+      "subitems": [],
+      "property1": {
+        "value": "",
+        "dice": 0,
+        "die": "",
+        "damageType": "",
+        "critDice": 0,
+        "critDie": "",
+        "critDamage": "",
+        "critDamageType": ""
+      }
+    },
+    "armor": {
+      "templates": ["common", "physical", "investable"],
+      "category": "light",
+      "group": null,
+      "acBonus": 0,
+      "strength": 0,
+      "dexCap": 5,
+      "checkPenalty": 0,
+      "speedPenalty": 0,
+      "runes": {
+        "potency": 0,
+        "resilient": 0,
+        "property": []
+      },
+      "subitems": []
+    },
+    "equipment": {
+      "templates": ["common", "physical", "investable"],
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "subitems": []
+    }
+  }
+}

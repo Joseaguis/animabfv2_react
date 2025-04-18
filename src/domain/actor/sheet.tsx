@@ -1,36 +1,8 @@
-import { FC, useState, StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { FC, useState } from "react";
 interface ActorSheetProps {
   actor: Actor;
   options: any;
 }
-
-
-export class MySystemActorSheet extends ActorSheet {
-  get template() {
-    return "systems/animabfv2/templates/actor-sheet.html";
-  }
-  async getData() {
-    const data = await super.getData();
-    return {
-      ...data,
-    };
-  }
-  activateListeners(html: JQuery) {
-    super.activateListeners(html);
-    // Mount React component
-    const sheetElement = html.find("#react-root")[0];
-    if (sheetElement) {
-      const root = createRoot(sheetElement);
-      root.render(
-        <StrictMode>
-          <ActorSheetReact actor={this.actor} options={this.options} />
-        </StrictMode>
-      );
-    }
-  }
-}
-
 
 const ActorSheetReact: FC<ActorSheetProps> = ({ actor }) => {
   const [editing, setEditing] = useState(false);
@@ -48,13 +20,15 @@ const ActorSheetReact: FC<ActorSheetProps> = ({ actor }) => {
     </div>
   );
 };
+
 const ActorView: FC<{ actor: Actor }> = () => {
   return (
     <div>
-      <h2>HolaMundo V5 54</h2>
+      <h2>HolaMundo Patata</h2>
     </div>
   );
 };
+
 const ActorEditor: FC<{ actor: Actor }> = ({ actor }) => {
   const [formData] = useState(actor.system);
   const handleSubmit = async () => {
@@ -72,3 +46,5 @@ const ActorEditor: FC<{ actor: Actor }> = ({ actor }) => {
     </form>
   );
 };
+
+export { ActorSheetReact };

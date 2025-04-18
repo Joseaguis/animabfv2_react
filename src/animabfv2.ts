@@ -1,5 +1,5 @@
-import { MySystemActor } from "./core/domain/actor/base";
-import { MySystemActorSheet } from "./templates/actor-sheet";
+import { MySystemActor } from "./domain/actor/base";
+import { ActorSheetAnimaBF } from "./domain/actor/template";
 //import { MySystemActorSheet } from "./templates/actor-sheet-pf2e";
 
 export class MySystem {
@@ -12,7 +12,7 @@ export class MySystem {
 
     // Register sheet classes
     //Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("my-system", MySystemActorSheet, {
+    Actors.registerSheet("my-system", ActorSheetAnimaBF, {
       types: ["character", "npc", "vehicle"],
       makeDefault: true,
       label: "Texto"
@@ -20,6 +20,8 @@ export class MySystem {
   }
 
 }
+
+
 
 // animabfActorSheet
 
